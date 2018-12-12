@@ -30,3 +30,9 @@ relation_list = customerBookRepository.get_all()
 for relation_item in relation_list:
     print(relation_item.customer)
     print(f"{relation_item.id}-{relation_item.name}")
+
+#insert
+customerBookRepository.insert(CustomerBook(None,"psikoanalist", 1))
+
+#delete
+

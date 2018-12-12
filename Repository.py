@@ -17,3 +17,7 @@ class Repository():
     def filter(self, query):
         customers = self.session.query(self.domain).filter(query)
         return customers
+
+    def insert(self, insert_object):
+        self.session.add(insert_object)
+        self.session.commit()

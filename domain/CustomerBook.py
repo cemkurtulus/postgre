@@ -12,6 +12,7 @@ class CustomerBook(Base):
     customer_id = Column(Integer, ForeignKey('customer.id'))
     customer = relationship("Customer", uselist=False)
 
-    def __init__(self, id, name):
+    def __init__(self, id, name, customer_id):
         self.id = id
         self.name = name
+        self.customer_id = customer_id
